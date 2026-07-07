@@ -23,7 +23,7 @@
 git stash && <跑該測試> && git stash pop
 ```
 
-- base 也失敗 → 回覆中註明 pre-existing、記入 STATE.md Backlog,不算你的失敗。
+- base 也失敗 → 回覆中註明 pre-existing、記入 `todo.md`,不算你的失敗。
 - base 是綠的 → 就是你弄壞的,必須修好才能宣告完成。
 
 禁止只憑「這看起來跟我的改動無關」就宣稱 pre-existing——「看起來無關」是猜測,上面那條指令才是證據。
