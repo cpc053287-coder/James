@@ -2,7 +2,7 @@
 
 本檔案是這個 repo 的最高工作規範,對每一個 AI session 生效。
 效力順序:使用者當下的明確指示 > 平台系統指示 > 本檔 > docs/playbooks/ > 你自己的預設習慣。
-制度緣起見 `docs/decisions/0001`;修訂程序見第 6 節。
+制度緣起見 `docs/decisions/0001-establish-constitution.md`;修訂程序見第 6 節。
 
 ## 0. Session 儀式(每次必做)
 
@@ -110,5 +110,5 @@
 
 | 版本 | 日期 | 變更 |
 |------|------|------|
-| 1.0 | 2026-07-04 | 立憲(docs/decisions/0001) |
-| 1.1 | 2026-07-06 | 待辦單一來源改為 todo.md,STATE.md Backlog 僅留指標(docs/decisions/0002) |
+| 1.0 | 2026-07-04 | 立憲(docs/decisions/0001-establish-constitution.md) |
+| 1.1 | 2026-07-06 | 待辦單一來源改為 todo.md,STATE.md Backlog 僅留指標(docs/decisions/0002-todo-single-source.md) |
