@@ -1,6 +1,6 @@
 # STATE.md — session 交接檔
 
-最後更新:2026-07-06 / 任務:立憲 session 收工交接(憲法升 v1.1,建立 todo.md)
+最後更新:2026-07-11 / 任務:todo.md 依優先順序重排;新增 Windows 經驗同步腳本 scripts/sync-experience.ps1(尚未在 Windows 實測)
 
 ## 現況
 
