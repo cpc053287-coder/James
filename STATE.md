@@ -1,6 +1,6 @@
 # STATE.md — session 交接檔
 
-最後更新:2026-07-11 / 任務:todo.md 依優先順序重排;新增 Windows 經驗同步腳本 scripts/sync-experience.ps1(尚未在 Windows 實測)
+最後更新:2026-07-18 / 任務:新增 scripts/continue-session.ps1(額度重置後自動對前景視窗送「繼續」);與 sync-experience.ps1 同樣尚未在 Windows 實測
 
 ## 現況
 
