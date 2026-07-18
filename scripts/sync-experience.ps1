@@ -1,4 +1,4 @@
-# 用途:把本 repo 的經驗紀錄檔同步到 C:\COWORK\Experience
+﻿# 用途:把本 repo 的經驗紀錄檔同步到 C:\COWORK\Experience
 # 用法:在 repo 目錄下執行
 #   powershell -ExecutionPolicy Bypass -File scripts\sync-experience.ps1
 # 可重複執行:每次會先 git pull 取最新,再覆蓋目的地的同名檔。
