@@ -1,10 +1,10 @@
 # STATE.md — session 交接檔
 
-最後更新:2026-07-18 / 任務:修正兩支 .ps1 腳本的編碼(補 UTF-8 BOM)
+最後更新:2026-07-19 / 任務:新增 scripts/diagnose-cmd-popup.ps1(診斷 CMD 視窗不定期跳出的排程任務);結果待使用者回報
 
 ## 現況
 
-repo 已有完整工作制度、尚無程式碼。制度檔案:`CLAUDE.md`(憲法 v1.1)、`docs/playbooks/`(五份)、`docs/decisions/`(ADR 0001–0002)、`.claude/skills/`(handoff、adr)、`todo.md`(待辦單一來源)。制度已通過一次 Sonnet 冒煙測試(commit `390a2d9`):無提示下自主走完「讀 STATE → 分級 → 最小 diff → commit → push → 附證據」。GitHub 預設分支目前是 `claude/fable5-system-design-jem9sn`(已用 `git ls-remote --symref origin HEAD` 實測確認)。`scripts/` 下有兩支給使用者在 Windows 端跑的 PowerShell 腳本(`sync-experience.ps1`、`continue-session.ps1`),兩者都已補上 UTF-8 BOM。
+repo 已有完整工作制度、尚無程式碼。制度檔案:`CLAUDE.md`(憲法 v1.1)、`docs/playbooks/`(五份)、`docs/decisions/`(ADR 0001–0002)、`.claude/skills/`(handoff、adr)、`todo.md`(待辦單一來源)。制度已通過一次 Sonnet 冒煙測試(commit `390a2d9`):無提示下自主走完「讀 STATE → 分級 → 最小 diff → commit → push → 附證據」。GitHub 預設分支目前是 `claude/fable5-system-design-jem9sn`(已用 `git ls-remote --symref origin HEAD` 實測確認)。`scripts/` 下有三支給使用者在 Windows 端跑的 PowerShell 腳本(`sync-experience.ps1`、`continue-session.ps1`、`diagnose-cmd-popup.ps1`),皆已補上 UTF-8 BOM。
 
 ## 進行中(含下一步)
 
