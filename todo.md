@@ -36,6 +36,19 @@
 - [ ] 破壞性動作攔截(鐵律 3)
 - 任何一條在弱模型上失靈 → 走 `CLAUDE.md` 第 6 節修憲程序修正,附 ADR。
 
+### 5. 落地實作 C:\ESH 專案的 Claude × Antigravity 協作強化方案(使用者本機操作)
+
+- [ ] 依對話中收斂出的 v2.1 方案,實際修改 `C:\ESH\esh_watch_crawler` 的程式碼與設定,落實 5 大強化關卡:
+      1. 來源可信度分層 + 動態校準協議(`source_type`/`confidence_score`,`UNTESTED`→`PRELIMINARY`(0.92)→`CALIBRATED`,N≥100 用 Wilson Score Interval 動態調整門檻)
+      2. 網頁救援白名單分級(`config/whitelist_policy.yaml`:`ALLOWED`/`RESTRICTED` 僅摘要不深爬/`FORBIDDEN`,重試上限 2 次、30s timeout)
+      3. 術語審計硬性關卡(`MAX_REWRITE_ATTEMPTS=2`,第 3 次未過標記 `REJECTED_AUDIT_EXCEEDED` 並通知,寫入 `data/audit_trail.jsonl`)
+      4. `compute_full_semantic_hash()`(涵蓋 `implications_zh_tw`/`key_changes_zh_tw`/`figure_descriptions` 等全部實質欄位,非僅位元組比對)
+      5. 交接紀錄 `data/collaboration_log.jsonl`(`timestamp/trace_id/item_id/actor_model/action/result/note`)
+- 完整規格書位置:`C:\Users\aifre\.gemini\antigravity\brain\ac45097c-d90b-426d-b61b-6db14a099e19\claude_antigravity_collaboration_report.md`(v2.1,存在使用者 Windows 本機,**此雲端 session 無法讀取**,以上是對話中討論收斂的摘要,非本 session 親自驗證過的內容)。
+- 執行者:使用者本機的 Antigravity/Claude Code 環境,`C:\ESH` 不在本雲端 session 可存取範圍。
+- 建議動作前先跑 `/grill-me` 對照 `C:\ESH` 實際程式碼再動工(能發現本 session 純書面審查看不到的落差)。
+- 尚待補的小項(不急,實作階段處理即可):hash 涵蓋欄位清單建議寫成單元測試,避免未來報告模板加欄位卻忘記同步更新 hash 函式。
+
 ## 已完成(留檔備查)
 
 - [x] 2026-07-04 立憲:CLAUDE.md + 5 份 playbooks + ADR 制度 + handoff/adr skills(commit `1e6fcfc`)
