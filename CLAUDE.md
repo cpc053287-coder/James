@@ -1,4 +1,4 @@
-# 工作憲法 v1.1
+# 工作憲法 v1.2
 
 本檔案是這個 repo 的最高工作規範,對每一個 AI session 生效。
 效力順序:使用者當下的明確指示 > 平台系統指示 > 本檔 > docs/playbooks/ > 你自己的預設習慣。
@@ -67,6 +67,7 @@
 | 卡住、重複失敗、資訊不足 | `docs/playbooks/stuck.md` |
 | 做了會約束未來的技術選擇 | `.claude/skills/adr` |
 | session 要結束 | `.claude/skills/handoff` |
+| 使用者提起本 session 存取不到的外部專案 | `docs/context/`(見 ADR 0003;先確認自己有無存取權,再作業) |
 
 每份 playbook 都在 120 行以內:讀了不虧,不讀而犯規才虧。
 
@@ -112,3 +113,4 @@
 |------|------|------|
 | 1.0 | 2026-07-04 | 立憲(docs/decisions/0001-establish-constitution.md) |
 | 1.1 | 2026-07-06 | 待辦單一來源改為 todo.md,STATE.md Backlog 僅留指標(docs/decisions/0002-todo-single-source.md) |
+| 1.2 | 2026-08-02 | 新增 `docs/context/` 分類與對應情境路由,存放本 session 存取不到的外部環境資訊(docs/decisions/0003-external-context-inventory.md) |
