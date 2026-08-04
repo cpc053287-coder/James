@@ -230,4 +230,29 @@ AGY 更新 `collaboration_log.jsonl` 與相關產出
 
 ## 後續行動
 
+### herdr 安裝決策(2026-08-04)
+
+**結論**: 選配(Optional)。
+
+| 項目 | 決策 |
+|---|---|
+| **要不要裝** | 若習慣在終端機(PowerShell/CLI)直接執行 Agent 指令且需同時開多視窗 → ⭕ 裝;否則 ❌ 不必 |
+| **裝在哪** | 全局系統工具,安裝一次後全電腦可用;不加進任何專案的 requirements.txt |
+| **首選場景** | `C:\ESH\esh_watch_crawler`(Claude ↔ Codex 交接期間,用 herdr 同屏監控) |
+| **次選場景** | `C:\COWORK`(長任務腳本與 Claude CLI 互動監控) |
+
+**安裝(若決定裝)**:
+```powershell
+cargo install herdr
+# 或直接下載編譯好的 herdr.exe 加入 PATH
+```
+
+**使用**:
+```powershell
+cd C:\ESH\esh_watch_crawler
+herdr  # 進入後可切換與管理多個 Agent 視窗
+```
+
+---
+
 見 todo.md #5(落地 C:\ESH 的 Claude × Antigravity v2.1 方案)與相關專案的 DEVELOPMENT_HANDOFF.md。
