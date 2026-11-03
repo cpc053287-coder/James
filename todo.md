@@ -49,6 +49,14 @@
 - 建議動作前先跑 `/grill-me` 對照 `C:\ESH` 實際程式碼再動工(能發現本 session 純書面審查看不到的落差)。
 - 尚待補的小項(不急,實作階段處理即可):hash 涵蓋欄位清單建議寫成單元測試,避免未來報告模板加欄位卻忘記同步更新 hash 函式。
 
+### 6. 職安島(職安衛學習遊戲)— 等使用者拍板後開工
+
+- [ ] 使用者確認 `docs/design/osh-island-architecture.md` 第 6 節「待確認事項」(目標對象、題目來源、技術棧)。
+- [ ] 階段 1 MVP:單一 HTML 的 2D 島嶼 + 闖關 + 成就 + 錯題本,發布為 claude.ai Artifact(`db` 做排行榜)。
+      2026-11-03 曾開工但被使用者中斷,**尚無任何程式碼**;第一個寫程式的 session 要照 CLAUDE.md 第 4 節填指令表。
+- 注意:Artifact `db` 只有 Contributor 以上能寫,公開連結的組織外訪客只能讀 → 公開排行榜需走階段 B(Supabase)。
+- 注意:puma.taipei 在雲端 session 網路政策外(DNS 失敗);參考網站資訊只能來自使用者提供的影片或截圖。
+
 ## 已完成(留檔備查)
 
 - [x] 2026-07-04 立憲:CLAUDE.md + 5 份 playbooks + ADR 制度 + handoff/adr skills(commit `1e6fcfc`)

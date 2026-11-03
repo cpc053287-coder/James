@@ -1,14 +1,14 @@
 # STATE.md — session 交接檔
 
-最後更新:2026-08-04 / 任務:文件化 Claude × Antigravity 協作模式並驗證 COWORK 盤點
+最後更新:2026-11-03 / 任務:分析 puma.taipei 政策島影片,產出職安島遊戲架構提案
 
 ## 現況
 
-repo 已有完整工作制度、尚無程式碼。制度檔案:`CLAUDE.md`(憲法 v1.2)、`docs/playbooks/`(五份)、`docs/decisions/`(ADR 0001–0003)、`docs/context/`(外部環境盤點含正確性驗證)、`.claude/skills/`(handoff、adr)、`todo.md`(待辦單一來源)。本 session 新增:`docs/context/cowork-inventory.md`(比對使用者的掃描報告後已更正 3 處錯誤)、`docs/context/claude-antigravity-collaboration.md`(4 大協作模式 + herdr 決策)。預設分支:`claude/fable5-system-design-jem9sn`。
+repo 已有完整工作制度、尚無程式碼。制度檔案:`CLAUDE.md`(憲法 v1.2)、`docs/playbooks/`(五份)、`docs/decisions/`(ADR 0001–0003)、`docs/context/`(外部環境盤點含正確性驗證)、`.claude/skills/`(handoff、adr)、`todo.md`(待辦單一來源)。本 session 新增:`docs/context/cowork-inventory.md`(比對使用者的掃描報告後已更正 3 處錯誤)、`docs/context/claude-antigravity-collaboration.md`(4 大協作模式 + herdr 決策)。預設分支:`claude/fable5-system-design-jem9sn`。2026-11-03 新增 `docs/design/osh-island-architecture.md`(職安衛學習遊戲架構提案,含參考網站拆解、資料模型、管理後台與維運),尚無程式碼。
 
 ## 進行中(含下一步)
 
-- 無進行中的工作。下一個 session 從使用者的新任務開始;開工儀式照 CLAUDE.md 第 0 節。
+- [ ] 職安島:架構提案已完成,等使用者確認第 6 節待確認事項;下一步是階段 1 MVP(詳見 todo.md 第 6 項)。
 
 ## Backlog
 
@@ -16,6 +16,8 @@ repo 已有完整工作制度、尚無程式碼。制度檔案:`CLAUDE.md`(憲�
 
 ## 地雷與教訓
 
+- 2026-11-03 使用者上傳的影片在 `/root/.claude/uploads/<session>/`;用 `ffmpeg -vf "fps=1/3.5,scale=470:-1,tile=4x3"` 做縮圖總表,一次就能看完 83 秒影片,再挑關鍵秒數抽原尺寸畫面細看。比逐張讀便宜很多。
+- 2026-11-03 Artifact `db` 的寫入權限:組織外訪客(個人 Pro 帳號分享出去的幾乎都是)只有 view 層級,不能寫 → 「大家都能上排行榜」不能只靠 Artifact。
 - 2026-08-04 本 session 用**實務驗證**修正了初版盤點的 3 處錯誤（比對掃描報告 PROJECT_PROVENANCE_SCAN.md 與 COWORK_SCAN_FINAL.md）:OCR 位置、_Codex 後綴用途、PIC2PDF/CLIP 分類。這是「截圖 → 推論 → 被資料驗證糾正」的好案例；若下次使用者又貼截圖，先問「有沒有能讀到的原始掃描報告？」
 - 2026-08-04 協作模式文件化時發現:使用者已在 C:\COWORK 實施 Watchdog 模式(AGY 監控 GPU)超過一個月。文件化時應主動問「現有實作有沒有漏掉的?」而非假設只有理論。
 - 2026-08-02 使用者可能用**截圖**餵資料(例:檔案總管的搜尋結果)。截圖只給檔名與路徑,**不等於讀過內容**。這種輸入要照 ADR 0003 寫進 `docs/context/`,並在檔頭把「看到什麼/沒看到什麼/哪些是推論」分開寫清楚;直接把推論寫成事實會讓下一個 session 拿去改真的程式碼。另注意截圖常被視窗邊界裁切,清單未必完整,要在檔案裡註明。
